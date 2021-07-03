@@ -94,7 +94,7 @@ class RoleController extends Controller
         ]);
         if ($validator->fails()) {
             return redirect()
-                ->route('roles.create')
+                ->route('roles.edit')
                 ->withErrors($validator)
                 ->withInput();
         }
