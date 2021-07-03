@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::resource('roles', App\Http\Controllers\RoleController::class);
+Route::resource('companies', App\Http\Controllers\CompanyController::class);
+Route::resource('users', App\Http\Controllers\UserController::class);
